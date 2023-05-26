@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const { getHomeContent } = require('../services/home.service')
+const { getContentHome } = require('../apis/home.api')
 const { checkAdminPermission } = require('../midlewares/authentication.midleware')
 
-router.get('/', checkAdminPermission, getHomeContent)
+router.get('/', checkAdminPermission, getContentHome)
 
 module.exports = router

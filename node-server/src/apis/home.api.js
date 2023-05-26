@@ -1,7 +1,8 @@
-const homeService = require('../service/home.service');
+const homeService = require('../services/home.service');
 
 const getContentHome = (req, res) => {
-  return homeService.getContentHome()
+  
+  return homeService.getHomeContent()
   .then(data => {
     return res.status(200).send(data)
   })

@@ -4,7 +4,7 @@ const checkAuth = (req, res, next) => {
   if (req.url === '/login') {
     return next()
   }
-  const idToken = req.headers.id_token || req.body.id_token
+  // const idToken = req.headers.id_token || req.body.id_token
   // const loginTenant = req.headers.login_tenant
   // if (!loginTenant) {
   //   return res.status(200).send({ success: false, code: ERROR_CODE_NO_TENANT_ID, message: 'The tenant ID must be a valid non-empty string' })
