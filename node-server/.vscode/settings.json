@@ -1,0 +1,33 @@
+{
+  "editor.autoIndent": "full",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "editor.formatOnPaste": true,
+  // "editor.formatOnSave": true,
+  // "editor.formatOnType": false,
+  // "editor.tabCompletion": "on",
+  // "editor.tabSize": 2,
+  // "editor.wordWrap": "off",
+  // "files.defaultLanguage": "javascript",
+  // "prettier.bracketSpacing": true,
+  // "prettier.printWidth": 120,
+  // "prettier.singleQuote": true,
+  // "[html]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[vue]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[typescript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // "[json]": {
+  //   "editor.defaultFormatter": "vscode.json-language-features"
+  // },
+  // "[jsonc]": {
+  //   "editor.defaultFormatter": "vscode.json-language-features"
+  // },
+  //"typescript.suggest.paths": false // uncomment this line to enable christian-kohler.path-intellisense
+}
