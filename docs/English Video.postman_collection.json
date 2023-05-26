@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "6655d4e7-c248-49af-8a10-e3083c6f6e59",
+		"name": "English Video",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"1123123123\",\r\n    \"email\": \"congtrinh098@gmail.com\",\r\n    \"name\": \"Trinh Tran 2\",\r\n    \"birthDate\": \"02/01/1991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1laWQiOiIxIiwiaHR0cDovL3NjaGVtYXMueG1sc29hcC5vcmcvd3MvMjAwNS8wNS9pZGVudGl0eS9jbGFpbXMvaGFzaCI6IjYxNmEyMTlkLTU0ZjgtNDZiNi1hZjdhLTdkZTdjMzcwNzg2MyIsInJvbGUiOiJVc2VyIiwibmJmIjoxNjMyODEwNjYyLCJleHAiOjE2OTU4ODI2NTUsImlhdCI6MTYzMjgxMDY2Mn0.PG4ZLv4AVgkuCD3g5vjYuEN3LnbzKxouOvAxgNZoU_o",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"647033ed8604ea112a52682b\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"1123123123\",\r\n    \"email\": \"congtrinh098@gmail.com\",\r\n    \"name\": \"Trinh Tran 2\",\r\n    \"birthDate\": \"02/01/1991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzA1ZjY2OTRhZDQxNjg2ZDg1Y2QwZCIsIm5hbWUiOiJUcmluaCBUcmFuIDMiLCJlbWFpbCI6ImNvbmd0cmluaDA5OEBnbWFpbC5jb20iLCJwcm9maWxlIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZDEwZTA4YzY2MmI0MWYzMjlmOTQ1OTQ4NmJiZDFhYT9zPTIwMCZyPXBnJmQ9bW0iLCJiaXJ0aERhdGUiOiIxOTkxLTAxLTAxVDE3OjAwOjAwLjAwMFoiLCJjcmVhdGVkRGF0ZSI6IjIwMjMtMDUtMjZUMDc6Mjc6MzQuMzEwWiIsInVwZGF0ZWREYXRlIjoiMjAyMy0wNS0yNlQwNzo1NjozNy41MTZaIiwiaWF0IjoxNjg1MDg4MDEzLCJleHAiOjE2ODUyNjA4MTN9.3m7wLoo8a52vMJzTv9AGXkhZS7gaNmXiFqK5p9yYPXU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Trinh Tran\",\r\n    \"birthDate\": \"02/01/1991\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"1123123123\",\r\n    \"description\": \"congtrinh098@gmail.com\",\r\n    \"type\": \"Youtube\",\r\n    \"url\": \"https://www.youtube.com/watch?v=EL6gw96u1-U\",\r\n    \"views\": 0,\r\n    \"likes\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/videos/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Videos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "javascript"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Video",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzA1ZjY2OTRhZDQxNjg2ZDg1Y2QwZCIsIm5hbWUiOiJUcmluaCBUcmFuIDMiLCJlbWFpbCI6ImNvbmd0cmluaDA5OEBnbWFpbC5jb20iLCJwcm9maWxlIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZDEwZTA4YzY2MmI0MWYzMjlmOTQ1OTQ4NmJiZDFhYT9zPTIwMCZyPXBnJmQ9bW0iLCJiaXJ0aERhdGUiOiIxOTkxLTAxLTAxVDE3OjAwOjAwLjAwMFoiLCJjcmVhdGVkRGF0ZSI6IjIwMjMtMDUtMjZUMDc6Mjc6MzQuMzEwWiIsInVwZGF0ZWREYXRlIjoiMjAyMy0wNS0yNlQwNzo1NjozNy41MTZaIiwiaWF0IjoxNjg1MDg4MDEzLCJleHAiOjE2ODUyNjA4MTN9.3m7wLoo8a52vMJzTv9AGXkhZS7gaNmXiFqK5p9yYPXU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"Trinh Tran test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/videos/647075dc0d5c0b86ff0f005a/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"647075dc0d5c0b86ff0f005a",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Detail",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzA1ZjY2OTRhZDQxNjg2ZDg1Y2QwZCIsIm5hbWUiOiJUcmluaCBUcmFuIDMiLCJlbWFpbCI6ImNvbmd0cmluaDA5OEBnbWFpbC5jb20iLCJwcm9maWxlIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZDEwZTA4YzY2MmI0MWYzMjlmOTQ1OTQ4NmJiZDFhYT9zPTIwMCZyPXBnJmQ9bW0iLCJiaXJ0aERhdGUiOiIxOTkxLTAxLTAxVDE3OjAwOjAwLjAwMFoiLCJjcmVhdGVkRGF0ZSI6IjIwMjMtMDUtMjZUMDc6Mjc6MzQuMzEwWiIsInVwZGF0ZWREYXRlIjoiMjAyMy0wNS0yNlQwNzo1NjozNy41MTZaIiwiaWF0IjoxNjg1MDg4MDEzLCJleHAiOjE2ODUyNjA4MTN9.3m7wLoo8a52vMJzTv9AGXkhZS7gaNmXiFqK5p9yYPXU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Trinh Tran test\",\r\n    \"birthDate\": \"02/01/1991\",\r\n    \"email\": \"congtrinh098@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/videos/647075dc0d5c0b86ff0f005a/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"647075dc0d5c0b86ff0f005a",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Video Delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NzA1ZjY2OTRhZDQxNjg2ZDg1Y2QwZCIsIm5hbWUiOiJUcmluaCBUcmFuIDMiLCJlbWFpbCI6ImNvbmd0cmluaDA5OEBnbWFpbC5jb20iLCJwcm9maWxlIjoiLy93d3cuZ3JhdmF0YXIuY29tL2F2YXRhci9jZDEwZTA4YzY2MmI0MWYzMjlmOTQ1OTQ4NmJiZDFhYT9zPTIwMCZyPXBnJmQ9bW0iLCJiaXJ0aERhdGUiOiIxOTkxLTAxLTAxVDE3OjAwOjAwLjAwMFoiLCJjcmVhdGVkRGF0ZSI6IjIwMjMtMDUtMjZUMDc6Mjc6MzQuMzEwWiIsInVwZGF0ZWREYXRlIjoiMjAyMy0wNS0yNlQwNzo1NjozNy41MTZaIiwiaWF0IjoxNjg1MDg4MDEzLCJleHAiOjE2ODUyNjA4MTN9.3m7wLoo8a52vMJzTv9AGXkhZS7gaNmXiFqK5p9yYPXU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"description\": \"mo ta moi update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/videos/647075dc0d5c0b86ff0f005a",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"videos",
+						"647075dc0d5c0b86ff0f005a"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
