@@ -31,6 +31,9 @@ app.use('/', require('./routers/home.router'))
 // users APIs
 app.use('/users', require('./routers/user.router'))
 
+// video APIs
+app.use('/videos', require('./routers/video.router'))
+
 // start listion server
 app.listen(process.env.API_PORT, () => {
   console.log(`Server running on port ${process.env.API_PORT}`);

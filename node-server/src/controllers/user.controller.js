@@ -11,7 +11,7 @@ function register(req, res) {
       if(user) {
         return res.json({
           status: 'EMAIL_ALREADY_EXISTS',
-          message: 'Email já existe',
+          message: 'Email existing',
         });
       }
       
@@ -57,7 +57,7 @@ function login(req, res) {
       if(!user) {
         return res.json({
           status: 'USER_NOT_FOUND',
-          message: 'Usuário não encontrado',
+          message: 'Not found',
         });
       }
 
@@ -66,7 +66,7 @@ function login(req, res) {
         if(!isMatch) {
           return res.json({
             status: 'PASSWORD_INCORRECT',
-            message: 'Senha incorreta',
+            message: 'Password incorrect',
           });
         }
 
@@ -135,7 +135,7 @@ function userDelete(req, res) {
     .then(() => {
       res.json({
         status: 'ACCOUNT_DELETED',
-        message: 'Conta deletada com sucesso!',
+        message: 'Account deleted!',
       })
     });
 }
