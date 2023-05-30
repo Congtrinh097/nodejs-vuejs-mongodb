@@ -83,10 +83,10 @@ function login(req, res) {
         jwtSign(payload)
           .then(token => {
             res.json({
-              status: true,
+              status: 'success',
               message: 'Login successful!',
               profile: payload,
-              token: `Bearer ${token}`,
+              token: token,
             });
           })
           .catch(err => {
@@ -97,41 +97,23 @@ function login(req, res) {
 }
 
 function update(req, res) {
-  const { email } = req.user;
-  const { authorization } = req.headers;
   const formData = {
     name: req.body.name,
-    birthDate: moment(req.body.birthDate, 'DD/MM/YYYY'),
     updatedDate: moment(),
   }
 
   const opts = {
     new: true,
   }
-
-  User.findOneAndUpdate({ email }, { $set: formData }, opts)
+  User.findOneAndUpdate({ _id: req.params.id} , { $set: formData }, opts)
     .then(user => {
-      const { name, email, profile, birthDate, createdDate, updatedDate } = user;
-      const payload = {
-        name,
-        email,
-        profile,
-        birthDate,
-        createdDate,
-        updatedDate,
-      }
-
-      res.json({
-        ...payload,
-        token: authorization,
-      });
+      res.json(user);
     });
 }
 
 function userDelete(req, res) {
-  const { email } = req.user;
-
-  User.findOneAndRemove({ email })
+  
+  User.findOneAndRemove({ _id: req.params.id })
     .then(() => {
       res.json({
         status: 'ACCOUNT_DELETED',

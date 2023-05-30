@@ -26,13 +26,13 @@ app.use(passport.initialize());
 app.use(checkAuth)
 
 // Admin APIs
-app.use('/', require('./routers/home.router'))
+app.use('/api/dashboard', require('./routers/dashboard.router'))
 
 // users APIs
-app.use('/users', require('./routers/user.router'))
+app.use('/api/users', require('./routers/user.router'))
 
 // video APIs
-app.use('/videos', require('./routers/video.router'))
+app.use('/api/videos', require('./routers/video.router'))
 
 // start listion server
 app.listen(process.env.API_PORT, () => {
